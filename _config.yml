@@ -1,0 +1,16 @@
+name: marginally useful info
+description: some unconventional thoughts about hardware and software architecture.
+meta_description: "Marginally useful information about hardware and software architecture."
+
+markdown: kramdown
+highlighter: rouge
+logo: false
+paginate: 15
+baseurl: /
+domain_name: "https://marginallyuseful.info"
+plugins: [jekyll-paginate]
+
+url: ""
+author: "marginally useful info"
+
+disqus-shortname: ""
