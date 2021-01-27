@@ -1,7 +1,9 @@
----
-# Let's add a comment to make this file sass-y.
-# Change this file for any custom CSS.
----
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Open Sans", Ubuntu, sans-serif;
+}
 
 /* We need to add display:inline in order to align the '>>' of the 'read more' link */
 .post-excerpt p {

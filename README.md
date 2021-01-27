@@ -1,6 +1,6 @@
 # Kasper
 
-This is a port of Ghost's default theme [Casper v1](https://github.com/tryghost/casper) for Jekyll. Here is a live [demo](https://rosario.io/kasper). 
+This is a port of Ghost's default theme [Casper v1](https://github.com/tryghost/casper) for Jekyll. Here is a live [demo](https://rosario.io/kasper).
 
 Feel free to fork, change, modify and re-use it.
 
@@ -10,10 +10,10 @@ Feel free to fork, change, modify and re-use it.
     cd kasper
     gem install jekyll
     gem install jekyll-paginate
-    
-## Change _config.yml
 
-Change the following settings in _config.yaml. Most likely you want the `baseurl: ""`
+## Change \_config.yml
+
+Change the following settings in \_config.yaml. Most likely you want the `baseurl: ""`
 
 ```
 baseurl: ""
@@ -32,22 +32,21 @@ Build page into `_site` folder
 
 ## Kasper theme includes
 
-* Pagination
-* Rss
-* Google Analytics Tracking code
-* Code Syntax Highlight
-* Author's profile with picture
-* Disqus comments
+- Pagination
+- Rss
+- Google Analytics Tracking code
+- Code Syntax Highlight
+- Author's profile with picture
+- Disqus comments
 
 ## Screenshots
 
 ![index page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-index.png)
 ![post page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-post.png)
 
-
 ## Thanks
 
-Most of the work has been already done by the Ghost team, I've just ported Casper to Jekyll. 
+Most of the work has been already done by the Ghost team, I've just ported Casper to Jekyll.
 I've also added few things specific to Jekyll and some minor style changes.
 
 ## Copyright & License
