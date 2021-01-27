@@ -117,8 +117,6 @@ If you look at the final few arrays, you can see that each time the function exe
 
 This should explain a bit about how memory allocation works in code, as well as the different ways of managing memory. To recap, the most basic, close-to-the-metal way of allocating code is what C does: the programmer must say when a variable is created and when it's no longer usable and its memory should be freed. This is fast and means you don't have to do garbage collection at the same time as running your actual code, but it's bug-prone. Then you have languages like Rust and Swift, where code written in that language has to obey certain rules, and as a result it's possible for the compiler to know where to automatically insert code to free up memory. And finally we have garbage collected languages, like Python, which don't require you to free memory manually, or to use a language where you need to structure your code in such a way that the language can free memory automatically, _but_ this comes at the expense of running garbage collection while your code is running - competing with your code for CPU cycles.
 
-#### What makes code performant?
-
 ---
 
 [^caveat]: Caveat: I'm going to talk about this as if we're using a compiled language rather than an interpreted one, just to remove one additional layer of complexity (i.e. that with interpreters, the CPU is running the _interpreter_ program, which uses your code as instructions to tell it what to do as it runs).
