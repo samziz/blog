@@ -18,4 +18,4 @@ Once upon a time,
 We alighted on SQL more or less as we alighted on the modern CRUD app. For SQL is extraordinarily well suited to the modern CRUD app, where the following invariants obtain:
 
 - **There are a few 'domain objects'** such as User, Session, and finally the domain object which distinguishes your CRUD app from all the other CRUD apps: let's say PuppyPettingAppointment.
-- **Most queries are get-object-by-ID lookups**.
+- **Most queries are get-object-by-ID lookups**. These are 
