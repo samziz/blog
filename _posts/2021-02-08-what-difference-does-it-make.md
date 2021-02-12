@@ -11,13 +11,13 @@ This blog post explores a few techniques for delta encoding. But ultimately it m
 
 ## Techniques for delta encoding
 
-First off, I'd like to make a counter-intuitive claim about diffing algorithms. At first blush you'd be forgiven for thinking that what makes a good diffing algorithm is - shock horror - being able to tell what's differed. I would argue that what makes a good diffing algorithm is in fact _being able to tell what's stayed the same_. Yes, technically this amounts to the same thing. But when we talk about the maths behind diffing algorithms, this is worth keeping in mind as a north star.
+First off, I'd like to make a counter-intuitive claim about diffing algorithms. At first blush you'd be forgiven for thinking that what makes a good diffing algorithm is - shock horror - being able to tell what differs. I would argue that what makes a good diffing algorithm is in fact _being able to tell what's stayed the same_. Yes, technically this amounts to the same thing. But when we talk about the maths behind diffing algorithms, this is worth keeping in mind as a north star.
 
 What we're looking for when we look for a diffing algorithm is a partial [bijection](https://en.wikipedia.org/wiki/Bijection) between two vectors: that is, a function which successfully maps part of the set of values in Copy A to the set of values that constitutes Copy B. The best diffing algorithm is that which establishes the largest possible domain of that bijective function, _excluding_ incorrectly mapped values.
 
 Let's express it in one rule:
 
-> For each value in vector A, the perfect diffing algorithm maps it to some value in vector B iff that value _is the same value_ as it was in vector A. The more often the diffing algorithm gets it right (i.e. tends towards perfection) the better it is.
+> For each value in vector A, the perfect diffing algorithm maps it to some element in vector B iff that element _is the same element_ as it was in vector A. The more often the diffing algorithm gets it right (i.e. tends towards perfection) the better it is.
 
 ### The homomorphic algorithm
 
@@ -29,7 +29,7 @@ When talking about technical topics, it _always_ helps to start with the crudest
 
 Let's call this the homomorphic approach, because the mapping it establishes is like a topological homomorphism (in algebraic topology). In other words, the diff, if treated as a function, is an bijective function mapping one vector to another by pairing each element of one vector with an element of the other.
 
-The downsides of this are quite easy to see. If we add one byte at the beginning, every subsequent byte will show as changed. The problem with the homomorphic algorithm is that it cannot cope with components being added to or removed from the vector, since it treats _position in the vector_ as the only ground of identity between a value in Copy A and a value in Copy B.
+The downsides of this are quite easy to see. If we add one byte at the beginning, every subsequent byte will show as changed. The problem with the homomorphic algorithm is that it cannot cope with elements being added to or removed from the vector, since it treats _position in the vector_ as the only ground of identity between a value in Copy A and a value in Copy B.
 
 ### The structural algorithm
 
